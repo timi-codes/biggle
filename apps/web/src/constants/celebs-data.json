@@ -1,0 +1,371 @@
+[
+    {
+        "title": "New and Noteworthy",
+        "artists": [
+            {
+                "name": "Damini Ogulu",
+                "job": "Musician",
+                "repliesIn": 3600,
+                "image": "burna",
+                "hasBeneficiary": true,
+                "price": "₦40K"
+            },
+            {
+                "name": "Azeez Fashola",
+                "job": "Musician",
+                "repliesIn": null,
+                "image": "nairamarley",
+                "hasBeneficiary": true,
+                "price": "₦30K"
+            },
+            {
+                "name": "Anita Natacha Akide",
+                "job": "Bet9ja Big Brother Nigeria",
+                "repliesIn": 172800,
+                "image": "tasha",
+                "hasBeneficiary": true,
+                "price": "₦20K"
+            },
+            {
+                "name": "David Adeleke",
+                "job": "Musician",
+                "repliesIn": 172800,
+                "image": "davido",
+                "hasBeneficiary": true,
+                "price": "₦10K"
+            },
+            {
+                "name": "Funke Akindele",
+                "job": "Artist",
+                "repliesIn": 86400,
+                "image": "jenifa",
+                "hasBeneficiary": false,
+                "price": "₦15K"
+            },
+            {
+                "name": "Yemi Alade",
+                "job": "Singer/Song Writer",
+                "repliesIn": null,
+                "image": "yemialade",
+                "hasBeneficiary": false,
+                "price": "₦10K"
+            }
+        ]
+    },
+    {
+        "title": "Featured",
+        "artists": [
+            {
+                "name": "Folarin Falana",
+                "job": "Singer/Song writer",
+                "repliesIn": 86400,
+                "image": "falz",
+                "hasBeneficiary": true,
+                "price": "₦10K"
+            },
+            {
+                "name": "Omoniyi Raphael",
+                "job": "Musician",
+                "repliesIn": null,
+                "image": "zlatan",
+                "hasBeneficiary": false,
+                "price": "₦10K"
+            },
+            {
+                "name": "Bankole Welligton",
+                "job": "Singer/Song writer",
+                "repliesIn": null,
+                "image": "bankyw",
+                "hasBeneficiary": false,
+                "price": "₦5K"
+            },
+            {
+                "name": "Temilade Openiyi",
+                "job": "Singer/Song Writer",
+                "repliesIn": 172800,
+                "image": "tems",
+                "hasBeneficiary": false,
+                "price": "₦10K"
+            },
+            {
+                "name": "Tiwa Savage",
+                "job": "Musician",
+                "repliesIn": 172800,
+                "image": "tiwa",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "Timi Dakolo",
+                "job": "Singer/Song Writer",
+                "repliesIn": 172800,
+                "image": "timi",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            }
+        ]
+    },
+    {
+        "title": "COV-19 relief campaign",
+        "artists": [
+            {
+                "name": "Aituaje Iruobe",
+                "job": "Singer/Song writer",
+                "repliesIn": null,
+                "image": "waje",
+                "hasBeneficiary": false,
+                "price": "₦10K"
+            },
+            {
+                "name": "Simisola Kosoko",
+                "job": "Singer/Song writer",
+                "repliesIn": 3600,
+                "image": "simi",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "Pamilerin Adegoke",
+                "job": "Influencers",
+                "repliesIn": 3600,
+                "image": "pampam",
+                "hasBeneficiary": false,
+                "price": "₦10K"
+            },
+            {
+                "name": "Gloria Olorunto",
+                "job": "Creator",
+                "repliesIn": 172800,
+                "image": "maraji",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "IK Ogbonna",
+                "job": "Artist",
+                "repliesIn": null,
+                "image": "ik",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "Sunday Ginikachukwu Nweke",
+                "job": "Song Producer",
+                "repliesIn": 86400,
+                "image": "masterkraft",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            }
+        ]
+    },
+    {
+        "title": "Benefiting No Kid Hungry",
+        "artists": [
+            {
+                "name": "Maryam Apaokagi",
+                "job": "Creator",
+                "repliesIn": 86400,
+                "image": "taoma",
+                "hasBeneficiary": true,
+                "price": "₦25K"
+            },
+            {
+                "name": "Eva Alordiah",
+                "job": "Singer/Song writer",
+                "repliesIn": 3600,
+                "image": "eva",
+                "hasBeneficiary": true,
+                "price": "₦50K"
+            },
+            {
+                "name": "Samuel Perry",
+                "job": "Comedy",
+                "repliesIn": 86400,
+                "image": "shaggi",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "Jephthah Akpororo",
+                "job": "Comedy",
+                "repliesIn": null,
+                "image": "apkororo",
+                "hasBeneficiary": false,
+                "price": "₦5K"
+            },
+            {
+                "name": "Prosper Otemuyiwa",
+                "job": "Tech Influencer",
+                "repliesIn": 3600,
+                "image": "prosper",
+                "hasBeneficiary": false,
+                "price": "₦15K"
+            },
+            {
+                "name": "Sam Adeyemi",
+                "job": "Pastor",
+                "repliesIn": null,
+                "image": "samdeyemi",
+                "hasBeneficiary": true,
+                "price": "₦50K"
+            }
+        ]
+    },
+    {
+        "title": "Benefiting Equity Advocates",
+        "artists": [
+            {
+                "name": "Tony Elumelu",
+                "job": "Entrepreneur",
+                "repliesIn": null,
+                "image": "elemelu",
+                "hasBeneficiary": true,
+                "price": "₦100K"
+            },
+            {
+                "name": "Salem King",
+                "job": "Singer/Song writer",
+                "repliesIn": 86400,
+                "image": "salem",
+                "hasBeneficiary": false,
+                "price": "₦5K"
+            },
+            {
+                "name": "Noble Igwe",
+                "job": "Fashion Influencer",
+                "repliesIn": 3600,
+                "image": "nobleigwe",
+                "hasBeneficiary": false,
+                "price": "₦15K"
+            },
+            {
+                "name": "Tunde Ednut",
+                "job": "Influencer",
+                "repliesIn": 86400,
+                "image": "tundeednut",
+                "hasBeneficiary": false,
+                "price": "₦25K"
+            },
+            {
+                "name": "Laila Johnson Salami",
+                "job": "Influencer",
+                "repliesIn": null,
+                "image": "laila",
+                "hasBeneficiary": true,
+                "price": "₦10K"
+            },
+            {
+                "name": "Emmanuel Ogonna",
+                "job": "Comedy",
+                "repliesIn": 86400,
+                "image": "crazeclown",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            }
+        ]
+    },
+    {
+        "title": "Musicians",
+        "artists": [
+            {
+                "name": "Folarin Falana",
+                "job": "Singer/Song writer",
+                "repliesIn": 3600,
+                "image": "falz",
+                "hasBeneficiary": true,
+                "price": "₦100K"
+            },
+            {
+                "name": "Omoniyi Raphael",
+                "job": "Musician",
+                "repliesIn": null,
+                "image": "zlatan",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            },
+            {
+                "name": "Bankole Welligton",
+                "job": "Singer/Song writer",
+                "repliesIn": 86400,
+                "image": "bankyw",
+                "hasBeneficiary": true,
+                "price": "₦5K"
+            },
+            {
+                "name": "Temilade Openiyi",
+                "job": "Singer/Song Writer",
+                "repliesIn": 3600,
+                "image": "tems",
+                "hasBeneficiary": true,
+                "price": "₦25K"
+            },
+            {
+                "name": "Tiwa Savage",
+                "job": "Musician",
+                "repliesIn": null,
+                "image": "tiwa",
+                "hasBeneficiary": false,
+                "price": "₦15K"
+            },
+            {
+                "name": "Timi Dakolo",
+                "job": "Singer/Song Writer",
+                "repliesIn": 172800,
+                "image": "timi",
+                "hasBeneficiary": false,
+                "price": "₦15K"
+            }
+        ]
+    },
+    {
+        "title": "More",
+        "artists": [
+            {
+                "name": "Aituaje Iruobe",
+                "job": "Singer/Song writer",
+                "repliesIn": 172800,
+                "image": "waje",
+                "hasBeneficiary": true,
+                "price": "₦5K"
+            },
+            {
+                "name": "Simisola Kosoko",
+                "job": "Singer/Song writer",
+                "repliesIn": null,
+                "image": "simi",
+                "hasBeneficiary": false,
+                "price": "₦5K"
+            },
+            {
+                "name": "Pamilerin Adegoke",
+                "job": "Influencers",
+                "repliesIn": 3600,
+                "image": "pampam"
+            },
+            {
+                "name": "Gloria Olorunto",
+                "job": "Creator",
+                "repliesIn": null,
+                "image": "maraji",
+                "hasBeneficiary": false,
+                "price": "₦50K"
+            },
+            {
+                "name": "IK Ogbonna",
+                "job": "Artist",
+                "repliesIn": null,
+                "image": "ik",
+                "hasBeneficiary": true,
+                "price": "₦10K"
+            },
+            {
+                "name": "Sunday Ginikachukwu Nweke",
+                "job": "Song Producer",
+                "repliesIn": 86400,
+                "image": "masterkraft",
+                "hasBeneficiary": true,
+                "price": "₦15K"
+            }
+        ]
+    }
+]

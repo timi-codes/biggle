@@ -1,13 +1,13 @@
 import { Button } from "ui";
-// import { useHelloQuery } from "../store/services/api";
+import CategoryRow from "../components/celeb/category-row";
+import HeroVideo from '../components/hero-video'
 
 export default function Web() {
-//   const { data } = useHelloQuery();
 
   return (
-    <div>
-      <h1>hOME</h1>
-      <Button />
+    <div className="space-y-8">
+      <HeroVideo />
+      <CategoryRow data={{ name: "Featured", celebs: [{}, {}, {}, {}, {}, {}, {}] }} />
     </div>
   );
 }

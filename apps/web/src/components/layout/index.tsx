@@ -7,7 +7,7 @@ const Layout = ({ children }:Readonly<{
     return (
         <div className="h-full">
             <Header/>
-            <main className="max-w-screen-xl m-auto py-40">
+            <main className="max-w-screen-lg m-auto py-40">
                 { children }
             </main>
             <Footer/>
