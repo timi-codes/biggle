@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""The model describing the user."""
+type CelebModel {
+  """The user's ID."""
+  id: String!
+}
+
+type Query {
+  """"""
+  getCelebs: [CelebModel!]!
+}

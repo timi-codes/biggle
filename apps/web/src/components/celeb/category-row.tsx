@@ -20,7 +20,7 @@ const CategoryRow: React.FC<{ data: CategoryRowProps }> = ({ data }) => {
                 <h2 className="text-xl font-semibold">{data.name}</h2>
                 <Link href="/" className="text-sm font-medium">See all</Link> 
             </div>
-            <div className="flex space-x-6">
+            <div className="grid grid-flow-col auto-cols-[minmax(0,_1fr)] gap-x-6">
                 {
                     data.celebs.map(() => (
                         <Profile/>

@@ -1,9 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { validationSchemaForEnv } from './config/environment-variables';
-import { PersistenceModule } from './persistence/persistence.module';
+import { GraphQLModule } from '@nestjs/graphql';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
+import { join } from 'path';
+
+import { PrismaModule } from './prisma';
+import { CelebModule } from './celeb';
 
 @Module({
   imports: [
@@ -11,9 +15,20 @@ import { PersistenceModule } from './persistence/persistence.module';
       isGlobal: true,
       validationSchema: validationSchemaForEnv,
     }),
-    PersistenceModule,
+    GraphQLModule.forRootAsync<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: async (configService: ConfigService) => ({
+        playground: false,
+        plugins: [ApolloServerPluginLandingPageLocalDefault()],
+        autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+        buildSchemaOptions: { dateScalarMode: 'timestamp' },
+      }),
+    }),
+    PrismaModule,
+    CelebModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  providers: [CelebModule],
 })
 export class AppModule {}
