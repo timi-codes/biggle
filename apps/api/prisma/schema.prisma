@@ -16,8 +16,49 @@ model User {
   name  String?
 }
 
-model Celeb {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+enum SocialPlatform {
+  TWITTER
+  FACEBOOK
+  TWITCH
+  YOUTUBE
+  TIKTOK
+  INSTAGRAM
+  OTHER
+}
+
+model Celebrity {
+  id              Int     @id @default(autoincrement())
+  email           String  @unique
+  username        String  @unique
+  name            String
+
+  password         String
+  photo            String?
+  platform         SocialPlatform
+  numOfFollowers   Int
+  fee              Float
+
+  categories       Category[]
+  tags             Tag[]
+
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  @@map("users")
+}
+
+model Category {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  celebrities   Celebrity[]
+
+  @@map("categories")
+}
+
+model Tag {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  celebrity   Celebrity[]
+
+  @@map("tags")
 }

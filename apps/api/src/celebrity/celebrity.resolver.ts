@@ -1,20 +1,20 @@
 import { Resolver, Query } from '@nestjs/graphql';
-import { CelebService } from './celeb.service';
+import { CelebrityService } from './celebrity.service';
 import { Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType({ description: 'The model describing the user.' })
-export class CelebModel {
+export class CelebrityModel {
     @Field(() => String, { description: "The user's ID." })
     id: number;
 }
 
 
 @Resolver()
-export class CelebResolver {
-    constructor(private readonly celebService: CelebService) { }
+export class CelebrityResolver {
+    constructor(private readonly celebService: CelebrityService) { }
 
-    @Query(() => [CelebModel], { description: "" })
-    async getCelebs() {
+    @Query(() => [CelebrityModel], { description: "" })
+    async getCelebrities() {
         return []
     }
 }
