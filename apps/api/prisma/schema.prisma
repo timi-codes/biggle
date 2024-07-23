@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,6 +11,8 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+
+  @@map("users")
 }
 
 enum SocialPlatform {
@@ -28,26 +27,28 @@ enum SocialPlatform {
 
 model Celebrity {
   id              Int     @id @default(autoincrement())
-  email           String  @unique
   username        String  @unique
   name            String
+  discipline        String
 
-  password         String
   photo            String?
   platform         SocialPlatform
   numOfFollowers   Int
-  fee              Float
+  price              Float
+
+  hasBeneficiary    Boolean
 
   categories       Category[]
   tags             Tag[]
+  repliesIn        Int?
 
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
 
-  @@map("users")
+  @@map("celebrities")
 }
 
-model Category {
+model Category {  
   id          String        @id @default(cuid())
   name        String        @unique
   celebrities   Celebrity[]

@@ -21,6 +21,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json --runInBand",
     "test:ci": "jest --ci --runInBand",
+    "db:seed": "node ./prisma/seed/index.ts",
     "db:generate": "yarn prisma generate",
     "db:test:reset": "dotenv -e .env.test -- prisma migrate reset --force --skip-seed",
     "db:dev:migrate": "yarn prisma migrate dev",
@@ -72,7 +73,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "prisma": {
-    "seed": "ts-node prisma/test.seed.ts"
+    "seed": "npx ts-node prisma/seed/index.ts"
   },
   "jest": {
     "moduleFileExtensions": [

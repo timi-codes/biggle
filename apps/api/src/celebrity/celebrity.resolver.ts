@@ -2,6 +2,7 @@ import { Resolver, Query } from '@nestjs/graphql';
 import { CelebrityService } from './celebrity.service';
 import { Field, ObjectType } from '@nestjs/graphql';
 
+
 @ObjectType({ description: 'The model describing the user.' })
 export class CelebrityModel {
     @Field(() => String, { description: "The user's ID." })
