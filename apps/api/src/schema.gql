@@ -2,13 +2,75 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-"""The model describing the user."""
-type CelebModel {
-  """The user's ID."""
-  id: String!
+"""A data model representing a membership"""
+type CelebrityModel {
+  """The ID of the celebrity."""
+  id: Int!
+
+  """The username of the celebrity."""
+  username: String!
+
+  """The name of the celebrity."""
+  name: String!
+
+  """The discipline of the celebrity."""
+  discipline: String!
+
+  """The photo of the celebrity."""
+  photo: String!
+
+  """The platform of the celebrity."""
+  platform: String!
+
+  """The number of followers of the celebrity for the selected platform"""
+  numOfFollowers: Int!
+
+  """The fee to request a biggle from a celebrity"""
+  price: Float!
+
+  """The fee paid for a biggle is to support a cause"""
+  hasBeneficiary: Boolean!
+
+  """The time taken for a celrity to accept a biggle request"""
+  repliesIn: Int
+
+  """The date the celebrity profile was created."""
+  createdAt: Timestamp!
+
+  """The date the celebrity profile was updated."""
+  updatedAt: Timestamp!
+}
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+"""Model for paginated memberships reponse"""
+type PagedCelebritiesModel {
+  """The maximum number of items to return"""
+  limit: Int!
+
+  """The index of the first item to return."""
+  offset: Int!
+
+  """The total number of items."""
+  count: Int!
+
+  """The list of celebrities returned"""
+  data: [CelebrityModel!]!
 }
 
 type Query {
-  """"""
-  getCelebs: [CelebModel!]!
+  """Fetch celebrities by a category name"""
+  getCelebritriesByCategory(
+    """filter by category name"""
+    category: String!
+
+    """The maximum number of items to return"""
+    limit: Int! = 6
+
+    """The index of the first item to return."""
+    offset: Int! = 0
+  ): PagedCelebritiesModel!
 }

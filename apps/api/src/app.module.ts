@@ -7,7 +7,7 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
 import { join } from 'path';
 
 import { PrismaModule } from './prisma';
-import { CelebModule } from './celeb';
+import { CelebrityModule } from './celebrity';
 
 @Module({
   imports: [
@@ -27,8 +27,8 @@ import { CelebModule } from './celeb';
       }),
     }),
     PrismaModule,
-    CelebModule
+    CelebrityModule
   ],
-  providers: [CelebModule],
+  providers: [CelebrityModule],
 })
 export class AppModule {}
