@@ -4,23 +4,20 @@ import Profile from "./profile";
 import Image from "next/image"
 
 
-type Celebs = {
-
-}
-
 type CategoryBlockProps = {
-    name: string,
-    celebs: Celebs[]
+    id: string,
+    title: string
+    limit: number
 }
 
 
 const CategoryBlock: React.FC<{ data: CategoryBlockProps }> = ({ data }) => {
     return (
         <div className="flex flex-col bg-[#ffeee6] px-8 py-6 w-96 ">
-            <h2 className="text-lg font-semibold leading-6 mb-6">{data.name}</h2>
+            <h2 className="text-lg font-semibold leading-6 mb-6">{data.title}</h2>
 
             <div className="grid grid-cols-2  gap-4">
-                {
+                {/* {
                     data.celebs.map(() => (
                         <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                             <Image
@@ -32,7 +29,7 @@ const CategoryBlock: React.FC<{ data: CategoryBlockProps }> = ({ data }) => {
                             />
                         </div>
                     ))
-                }
+                } */}
             </div>
             <Link href="/" className="text-sm font-medium pt-6">See more</Link>
         </div>

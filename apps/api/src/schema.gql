@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-"""A data model representing a membership"""
+"""A data model representing a celebrity"""
 type CelebrityModel {
   """The ID of the celebrity."""
   id: Int!

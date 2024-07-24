@@ -1,7 +1,7 @@
 import { Field, Float, Int, ObjectType } from "@nestjs/graphql";
 import {$Enums, Celebrity } from "@prisma/client"
 
-@ObjectType({ description: 'A data model representing a membership' })
+@ObjectType({ description: 'A data model representing a celebrity' })
 export class CelebrityModel implements Celebrity {
 
     @Field(() => Int, { description: 'The ID of the celebrity.' })
@@ -32,7 +32,7 @@ export class CelebrityModel implements Celebrity {
     hasBeneficiary: boolean;
 
     @Field(() => Int, { nullable: true, description: 'The time taken for a celrity to accept a biggle request' })
-    repliesIn?: number;
+    repliesIn: number | null;
 
     @Field(() => Date, { description: 'The date the celebrity profile was created.' })
     createdAt: Date;
