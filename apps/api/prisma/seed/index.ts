@@ -21,8 +21,8 @@ const main = async() => {
                 },
             });
 
-            const existingCategoryNames = existingCategories.map(cat => cat.name);
-            const newCategoryNames = celebrity.categories.filter(cat => !existingCategoryNames.includes(cat));
+            const existingCategoryNames = existingCategories.map(cat => ({ id: cat.id, name: cat.name }));
+            const newCategoryNames = celebrity.categories.filter(cat => !existingCategoryNames.map((c)=> c.name).includes(cat));
 
             await prisma.celebrity.create({
                 data: {

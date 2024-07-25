@@ -9,7 +9,7 @@
         "hasBeneficiary": true,
         "price": 100,
         "repliesIn": 3600,
-        "categories": ["new-and-noteworthy"]
+        "categories": ["new-and-noteworthy", "musicians", "creators-for-advocacy-commitee-against-hunger"]
     },
     {
         "username": "tasha",
@@ -33,7 +33,7 @@
         "hasBeneficiary": true,
         "price": 100,
         "repliesIn": 3600,
-        "categories": ["new-and-noteworthy"]
+        "categories": ["new-and-noteworthy", "creators-for-advocacy-commitee-against-hunger"]
     },
     {
         "username": "jenifa",
@@ -69,7 +69,7 @@
         "hasBeneficiary": true,
         "price": 200,
         "repliesIn": 86400,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "zlatan",
@@ -81,7 +81,7 @@
         "hasBeneficiary": false,
         "price": 200,
         "repliesIn": null,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "bankyw",
@@ -93,7 +93,7 @@
         "hasBeneficiary": false,
         "price": 200,
         "repliesIn": null,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "tems",
@@ -105,7 +105,7 @@
         "hasBeneficiary": false,
         "price": 200,
         "repliesIn": null,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "tiwa",
@@ -117,7 +117,7 @@
         "hasBeneficiary": true,
         "price": 250,
         "repliesIn": null,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "timidakolo",
@@ -129,7 +129,7 @@
         "hasBeneficiary": true,
         "price": 140,
         "repliesIn": null,
-        "categories": ["featured", "musician"]
+        "categories": ["featured", "musicians"]
     },
     {
         "username": "waje",
@@ -177,7 +177,7 @@
         "hasBeneficiary": false,
         "price": 70,
         "repliesIn": 3600,
-        "categories": ["cov-19-relief-campaign"]
+        "categories": ["cov-19-relief-campaign", "comedy"]
     },
     {
         "username": "ik",
@@ -213,7 +213,7 @@
         "hasBeneficiary": false,
         "price": 200,
         "repliesIn": 86400,
-        "categories": ["benefiting-no-kid-hungry"]
+        "categories": ["benefiting-no-kid-hungry", "comedy", "creator"]
     },
     {
         "username": "eva",
@@ -237,7 +237,7 @@
         "hasBeneficiary": true,
         "price": 140,
         "repliesIn": 86400,
-        "categories": ["benefiting-no-kid-hungry"]
+        "categories": ["benefiting-no-kid-hungry", "comedy"]
     },
     {
         "username": "apkororo",
@@ -249,7 +249,7 @@
         "hasBeneficiary": true,
         "price": 140,
         "repliesIn": 86400,
-        "categories": ["benefiting-no-kid-hungry"]
+        "categories": ["benefiting-no-kid-hungry", "comedy"]
     },
     {
         "username": "prosper",
@@ -345,6 +345,89 @@
         "hasBeneficiary": true,
         "price": 200,
         "repliesIn": 3600,
-        "categories": ["benefiting-equity-advocates"]
+        "categories": ["benefiting-equity-advocates", "comedy"]
+    },
+    {
+        "username": "lasisielenu",
+        "name": "Nosa Afolabi",
+        "discipline": "Comedian",
+        "photo": "lasisielenu.png",
+        "platform": "INSTAGRAM",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 180,
+        "repliesIn": null,
+        "categories": ["comedians-for-chess-in-slum", "comedy"]
+    },
+    {
+        "username": "kennyblaq",
+        "name": "Otolorin Kehinde Peter",
+        "discipline": "Comedian",
+        "photo": "kennyblaq.png",
+        "platform": "TWITTER",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 140,
+        "repliesIn": 86400,
+        "categories": ["comedians-for-chess-in-slum", "comedy"]
+    },
+    {
+        "username": "mrmacaroni",
+        "name": "Adebowale Adedayo",
+        "discipline": "Comedian",
+        "photo": "mrmacaroni.png",
+        "platform": "TWITTER",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 120,
+        "repliesIn": 3600,
+        "categories": ["comedians-for-chess-in-slum", "comedy"]
+    },
+    {
+        "username": "layiwasabi",
+        "name": "Isaac Olayiwola",
+        "discipline": "Comedian",
+        "photo": "layiwasabi.png",
+        "platform": "TWITTER",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 100,
+        "repliesIn": null,
+        "categories": [
+            "comedians-for-chess-in-slum",
+            "comedy"
+        ]
+    },
+    {
+        "username": "darey",
+        "name": "Dare Art Alade",
+        "discipline": "Curator",
+        "photo": "darey.png",
+        "platform": "TWITTER",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 120,
+        "repliesIn": 3600,
+        "categories": [
+            "creators-for-advocacy-commitee-against-hunger",
+            "musicians",
+            "creator"
+        ]
+    },
+    {
+        "username": "asake",
+        "name": "Ahmed Ololade",
+        "discipline": "Musician",
+        "photo": "asake.png",
+        "platform": "TWITTER",
+        "numOfFollowers": 10000000,
+        "hasBeneficiary": true,
+        "price": 400,
+        "repliesIn": 3600,
+        "categories": [
+            "creators-for-advocacy-commitee-against-hunger",
+            "musicians",
+            "creator"
+        ]
     }
 ]

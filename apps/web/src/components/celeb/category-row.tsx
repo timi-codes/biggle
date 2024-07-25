@@ -5,7 +5,7 @@ import { getClient } from "../../lib/client";
 import { gql } from "../../__generated__";
 
 
-const GET_CELEBRITIES_BY_CATEGORY = gql(`
+export const GET_CELEBRITIES_BY_CATEGORY = gql(`
     query GetCelebritriesByCategory($category: String!) {
         getCelebritriesByCategory(category: $category) {
             count

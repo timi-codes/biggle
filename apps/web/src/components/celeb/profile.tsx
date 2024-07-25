@@ -10,11 +10,10 @@ const Profile = ({ data  }: { data: CelebrityModel}) => {
                         <Image
                             src={`/images/artist/${data.photo}`}
                             alt={`image of ${data.username}`}
-                        className="h-full w-full object-cover object-center group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
+                            className="h-full w-full object-cover object-center group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
                             width={800}
                             height={300}
                         />
-                    {/* </div> */}
  
                     {data.hasBeneficiary && (
                         <div className="absolute top-3 right-2">

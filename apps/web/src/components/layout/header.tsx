@@ -25,7 +25,7 @@ const categories: Category[] = [
 const Header = () => {
 
     return (
-        <header className='fixed w-full'>
+        <header className='fixed w-full z-30'>
             <div className='flex mx-auto items-center justify-between py-[12px] px-16 bg-white'>
                 <h1 className='font-black text-[28px] pb-2'>Biggle<span className='text-5xl text-accent h-[8px]'>.</span></h1>
                 <Filter />

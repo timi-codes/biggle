@@ -13,6 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
+    "\n    query GetCelebritriesBlockByCategory($category: String!, $limit: Int!, $offset: Int!) {\n        getCelebritriesByCategory(category: $category, limit: $limit, offset: $offset) {\n            count\n            data {\n            id\n            username\n            name\n            discipline\n            photo\n            platform\n            numOfFollowers\n            price\n            hasBeneficiary\n            repliesIn\n            createdAt\n            updatedAt\n            }\n            limit\n            offset\n        }\n}": types.GetCelebritriesBlockByCategoryDocument,
     "\n    query GetCelebritriesByCategory($category: String!) {\n        getCelebritriesByCategory(category: $category) {\n            count\n            data {\n            id\n            username\n            name\n            discipline\n            photo\n            platform\n            numOfFollowers\n            price\n            hasBeneficiary\n            repliesIn\n            createdAt\n            updatedAt\n            }\n            limit\n            offset\n        }\n}": types.GetCelebritriesByCategoryDocument,
 };
 
@@ -30,6 +31,10 @@ const documents = {
  */
 export function gql(source: string): unknown;
 
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n    query GetCelebritriesBlockByCategory($category: String!, $limit: Int!, $offset: Int!) {\n        getCelebritriesByCategory(category: $category, limit: $limit, offset: $offset) {\n            count\n            data {\n            id\n            username\n            name\n            discipline\n            photo\n            platform\n            numOfFollowers\n            price\n            hasBeneficiary\n            repliesIn\n            createdAt\n            updatedAt\n            }\n            limit\n            offset\n        }\n}"): (typeof documents)["\n    query GetCelebritriesBlockByCategory($category: String!, $limit: Int!, $offset: Int!) {\n        getCelebritriesByCategory(category: $category, limit: $limit, offset: $offset) {\n            count\n            data {\n            id\n            username\n            name\n            discipline\n            photo\n            platform\n            numOfFollowers\n            price\n            hasBeneficiary\n            repliesIn\n            createdAt\n            updatedAt\n            }\n            limit\n            offset\n        }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
