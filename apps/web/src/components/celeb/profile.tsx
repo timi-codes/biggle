@@ -7,13 +7,15 @@ const Profile = ({ data  }: { data: CelebrityModel}) => {
         <div className="">
             <a href={`/celeb/${data.username}`} className="group">
                 <div className="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                    <Image
-                        src={`/images/artist/${data.photo}`}
-                        alt={`image of ${data.username}`}
-                        className="h-full w-full object-cover object-center group-hover:opacity-75"
-                        width={800}
-                        height={300}
-                    />
+                        <Image
+                            src={`/images/artist/${data.photo}`}
+                            alt={`image of ${data.username}`}
+                        className="h-full w-full object-cover object-center group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
+                            width={800}
+                            height={300}
+                        />
+                    {/* </div> */}
+ 
                     {data.hasBeneficiary && (
                         <div className="absolute top-3 right-2">
                             <img
