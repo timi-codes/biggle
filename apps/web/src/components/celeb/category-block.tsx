@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import Profile from "./profile";
 import Image from "next/image"
 import { getClient } from "../../lib/client";
 import { gql } from "../../__generated__/gql";
+import { cn } from "../../lib/utils";
 
 
 export const GET_CELEBRITIES_BLOCK_BY_CATEGORY = gql(`
@@ -32,33 +32,35 @@ export const GET_CELEBRITIES_BLOCK_BY_CATEGORY = gql(`
 type CategoryBlockProps = {
     id: string,
     title: string
-    limit: number
 }
 
 
-const CategoryBlock: React.FC<{ data: CategoryBlockProps }> = async({ data }) => {
+const CategoryBlock: React.FC<{
+    data: CategoryBlockProps,
+    className: React.HTMLAttributes<HTMLDivElement>
+}> = async ({ data, className }) => {
     const { data: celebrities } = await getClient().query({
         query: GET_CELEBRITIES_BLOCK_BY_CATEGORY,
         variables: {
             category: data.id,
-            limit: data.limit,
+            limit: 4,
             offset: 0
         }
     });
-    console.log(celebrities)
+
     return (
-        <div className="flex flex-col bg-[#ffeee6] px-8 py-6 w-96 ">
-            <h2 className="text-lg font-semibold leading-6 mb-6">{data.title}</h2>
+        <div className={cn("flex flex-col px-8 py-6 w-96 my-10", className)}>
+            <h2 className="text-lg font-semibold leading-6 mb-6 opacity-85">{data.title}</h2>
 
             <div className="grid grid-cols-2  gap-4">
                 {
                     celebrities.getCelebritriesByCategory.data.map((data) => (
-                       <a href={`/celeb/${data.username}`}>
-                            <div className="cursor-pointer aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                       <a href={`/${data.username}`}>
+                            <div className="cursor-pointer aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 h-[188.5px]">
                                 <Image
                                     src={`/images/artist/${data.photo}`}
                                     alt={`image of ${data.username}`}
-                                    className="h-full w-full object-cover object-center hover:opacity-75 hover:opacity-75 hover:scale-125 transition delay-150 duration-300 ease-in-out"
+                                    className="h-full w-full object-cover object-top hover:opacity-75 hover:opacity-75 hover:scale-125 transition delay-150 duration-300 ease-in-out"
                                     width={800}
                                     height={300}
                                 />
@@ -67,7 +69,7 @@ const CategoryBlock: React.FC<{ data: CategoryBlockProps }> = async({ data }) =>
                     ))
                 }
             </div>
-            <Link href="/" className="text-sm font-medium pt-6">See more</Link>
+            <Link href={`/browse/${data.id}`} className="text-sm font-medium pt-6">See more</Link>
         </div>
     )
 };

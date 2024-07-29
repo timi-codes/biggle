@@ -47,12 +47,12 @@ const CategoryRow: React.FC<{ data: CategoryRowProps }> = async ({ data }) => {
         <div className="flex flex-col">
             <div className="flex justify-between items-center w-full py-4">
                 <h2 className="text-xl font-semibold">{data.title}</h2>
-                <Link href="/" className="text-sm font-medium">See all</Link>
+                <Link href={`/${data.id}`} className="text-sm font-medium">See all</Link>
             </div>
             <div className="grid grid-flow-col auto-cols-[minmax(0,_1fr)] gap-x-6">
                 {
-                    celebrities.getCelebritriesByCategory.data.map((data) => (
-                        <Profile data={data} />
+                    celebrities.getCelebritriesByCategory.data.map((celeb) => (
+                        <Profile isNew={data.id === "new-and-noteworthy"} data={celeb} />
                     ))
                 }
             </div>

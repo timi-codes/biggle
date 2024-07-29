@@ -1,16 +1,22 @@
 import React from "react";
 import Image from "next/image"
 import { CelebrityModel } from "../../__generated__/graphql";
+import { cn } from "../../lib/utils";
 
-const Profile = ({ data  }: { data: CelebrityModel}) => {
+const Profile = ({ data, isNew }: { data: CelebrityModel, isNew : boolean }) => {
     return (
         <div className="">
-            <a href={`/celeb/${data.username}`} className="group">
-                <div className="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <a href={`/${data.username}`} className="group">
+                <div className={
+                    cn(
+                        "relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7",
+                        isNew ? "h-[300px]" : "h-[188.5px]"
+                    )
+                }>
                         <Image
                             src={`/images/artist/${data.photo}`}
                             alt={`image of ${data.username}`}
-                            className="h-full w-full object-cover object-center group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
+                            className="h-full w-full object-cover object-top group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
                             width={800}
                             height={300}
                         />
@@ -35,7 +41,7 @@ const Profile = ({ data  }: { data: CelebrityModel}) => {
                 
                 {
                     data.repliesIn && (
-                        <span className="text-xs">Respond in {" "}
+                        <span className="text-xs mt-6">Respond in {" "}
                             <span className="font-semibold">
                                 {data.repliesIn === 86400
                                     ? '12 Hrs'
