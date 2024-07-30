@@ -2,6 +2,83 @@ import React from "react"
 import Image from "next/image"
 import { Clock3 } from 'lucide-react';
 import starRating from '../../assets/rating.svg';
+import VideoRequestItem from "../../components/celeb/request";
+
+
+const requests = [
+    {
+        id: 1,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 2,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 3,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 4,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 5,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 6,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 7,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    },
+    {
+        id: 8,
+        name: "David Adeleke",
+        discipline: "Musician",
+        photo: "davido.png",
+        price: 100,
+        repliesIn: 172800,
+        hasBeneficiary: true
+    }
+]
 
 const CelebrityPage = () => {
 
@@ -36,7 +113,7 @@ const CelebrityPage = () => {
                         </div> */}
                         </div>
                         <p className="text-sm text-gray-500 mt-5">
-Davido is flooded with fan requests for his hilarious videos! Whether it's birthday wishes, roasting friends, or offering encouragement, Jon always delivers laughs.                        </p>
+Davido is flooded with fan requests for his hilarious videos! Whether it's birthday wishes, roasting friends, or offering encouragement, Davido always delivers laughs.                        </p>
                         <div className="flex py-6 text-xs font-medium">
                             <button className="bg-accent text-white px-7 py-3 rounded-full font-bold ">Request for $100</button>
                             <button className="border border-2 border-[#000000] px-7 py-3 rounded-full ml-4 font-bold">Pay with Crypto</button>
@@ -75,6 +152,16 @@ Davido is flooded with fan requests for his hilarious videos! Whether it's birth
                     </div>
                 </div>
                 
+            </div>
+            <div className="mt-24">
+                <h1 className="text-2xl font-semibold text-gray-900">Requests</h1>
+                <div className="grid grid-cols-[repeat(auto-fill,18rem)] gap-x-10 gap-y-6 mt-6">
+                    {
+                        requests.map((celeb) => (
+                            <VideoRequestItem isNew data={celeb} />
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
