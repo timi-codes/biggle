@@ -1,8 +1,7 @@
 {
-  "extends": "tsconfig/nestjs.json",
+  "extends": "@biggle/typescript-config/nestjs.json",
   "compilerOptions": {
-    "outDir": "./dist",
     "baseUrl": "./",
-    "resolveJsonModule": true
+    "outDir": "./dist",
   }
 }

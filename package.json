@@ -1,25 +1,24 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "biggle-app",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
+    "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@biggle/eslint-config": "workspace:*",
+    "@biggle/typescript-config": "workspace:*",
     "prettier": "^3.0.0",
     "prisma": "^5.1.0",
     "turbo": "1.10.12"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=18"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "pnpm@8.15.5"
 }

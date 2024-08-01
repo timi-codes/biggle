@@ -4,7 +4,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import googlePlayButton from '../../assets/google-play.svg';
 import appStoreButton from '../../assets/app-store.svg';
 import Image from "next/image";
-import { Input } from "../ui/input";
+import { Input } from "@biggle/ui/input";
 
 const Footer = () => {
     return (

@@ -1,5 +1,13 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "@biggle/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "components"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

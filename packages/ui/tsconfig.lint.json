@@ -1,0 +1,14 @@
+{
+    "extends": "@biggle/typescript-config/react-library.json",
+    "compilerOptions": {
+        "outDir": "dist"
+    },
+    "include": [
+        "components",
+        "turbo"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

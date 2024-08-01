@@ -6,7 +6,7 @@ const Layout = ({ children }:Readonly<{
 }>) => {
     return (
         <div className="h-full">
-            <Header/>
+            <Header />
             <main className="max-w-screen-lg m-auto py-40">
                 { children }
             </main>

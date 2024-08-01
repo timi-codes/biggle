@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image"
 import { getClient } from "../../lib/client";
 import { gql } from "../../__generated__/gql";
-import { cn } from "../../lib/utils";
+import { cn } from "@biggle/ui/lib";
 
 
 export const GET_CELEBRITIES_BLOCK_BY_CATEGORY = gql(`
@@ -55,7 +55,7 @@ const CategoryBlock: React.FC<{
             <div className="grid grid-cols-2  gap-4">
                 {
                     celebrities.getCelebritriesByCategory.data.map((data) => (
-                       <a href={`/${data.username}`}>
+                        <a href={`/${data.username}`}>
                             <div className="cursor-pointer aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 h-[188.5px]">
                                 <Image
                                     src={`/images/artist/${data.photo}`}

@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image"
 import { CelebrityModel } from "../../__generated__/graphql";
-import { cn } from "../../lib/utils";
+import { cn } from "@biggle/ui/lib";
 
-const Profile = ({ data, isNew }: { data: CelebrityModel, isNew : boolean }) => {
+const Profile = ({ data, isNew }: { data: CelebrityModel, isNew: boolean }) => {
     return (
         <div className="">
             <a href={`/${data.username}`} className="group">
@@ -13,14 +13,14 @@ const Profile = ({ data, isNew }: { data: CelebrityModel, isNew : boolean }) => 
                         isNew ? "h-[300px]" : "h-[188.5px]"
                     )
                 }>
-                        <Image
-                            src={`/images/artist/${data.photo}`}
-                            alt={`image of ${data.username}`}
-                            className="h-full w-full object-cover object-top group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
-                            width={800}
-                            height={300}
-                        />
- 
+                    <Image
+                        src={`/images/artist/${data.photo}`}
+                        alt={`image of ${data.username}`}
+                        className="h-full w-full object-cover object-top group-hover:opacity-75 group-hover:scale-125 transition delay-150 duration-300 ease-in-out"
+                        width={800}
+                        height={300}
+                    />
+
                     {data.hasBeneficiary && (
                         <div className="absolute top-3 right-2">
                             <img
@@ -38,7 +38,7 @@ const Profile = ({ data, isNew }: { data: CelebrityModel, isNew : boolean }) => 
                 </div>
                 <h3 className="mt-2 text-sm font-semibold text-gray-900">{data.name}</h3>
                 <p className="text-xs text-gray-500">{data.discipline}</p>
-                
+
                 {
                     data.repliesIn && (
                         <span className="text-xs mt-6">Respond in {" "}

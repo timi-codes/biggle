@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Input } from '../ui/input';
+import { Input } from '@biggle/ui/input';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectLabel, SelectItem } from '@radix-ui/react-select';
 
