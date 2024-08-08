@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Badge } from '@biggle/ui/badge';
 import { stringToColor } from '../../utils';
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from '@biggle/ui/drawer';
+import { useRouter } from 'next/navigation';
 
 interface Category {
     name: string
@@ -13,14 +14,14 @@ interface Category {
 }
 
 const categories: Category[] = [
-    { name: "Home" },
-    { name: "Featured", route: "featured", count: 100 },
-    { name: "Actors", route: "actors", count: 215 },
-    { name: "Athletes", route: "athletes", count: 134 },
-    { name: "Reality TV", route: "reality-tv", count: 118 },
-    { name: "Musician", route: "musician", count: 213 },
-    { name: "Creators", route: "creators", count: 114 },
-    { name: "All Categories", route: "all" }
+    { name: "Home", route: "/" },
+    { name: "Featured", route: "/browse/featured", count: 100 },
+    { name: "Actors", route: "/browse/actors", count: 215 },
+    { name: "Athletes", route: "/browse/athletes", count: 134 },
+    { name: "Reality TV", route: "/browse/reality-tv", count: 118 },
+    { name: "Musician", route: "/browse/musician", count: 213 },
+    { name: "Creators", route: "/browse/creators", count: 114 },
+    { name: "All Categories", route: "/browse" }
 ]
 
 enum ModalContext {
@@ -32,6 +33,7 @@ enum ModalContext {
 
 const Header = () => {
     const [modalContext, setModalContext] = React.useState<ModalContext>(ModalContext.DEFAULT)
+    const router = useRouter()
 
     const handleAuthModal = (e: React.MouseEvent<HTMLButtonElement>) => {
         const context = ModalContext[e.currentTarget.textContent?.toLocaleUpperCase() as keyof typeof ModalContext]
@@ -61,15 +63,16 @@ const Header = () => {
                                 <Badge
                                     role='button'
                                     key={category.name}
-                                    className={`bg-white text-black rounded-full py-1 pr-4 pl-6 h-9 hover:text-black/90`}
+                                    className={`flex items-center h-full bg-white text-black rounded-full py-1 pr-4 pl-6 h-9 hover:text-black/90 border-none`}
                                     style={{
                                         color: category.count ? stringToColor(`${category.name}`) : "black"
                                     }}
+                                    onClick={() => router.push(category.route || "/")}
                                 >
-                                    <Link href="/" className="flex items-center justify-between">
+                                    <>
                                         <span>{category.name}</span>
                                         <span className="ml-4 text-[11px] opacity-60">{category.count}</span>
-                                    </Link>
+                                    </>
                                 </Badge>
                             ))
                         }
